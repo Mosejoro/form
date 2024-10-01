@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Tech Webinar Registration</h2>
+      <form
+        id="registrationForm"
+        action="https://formsubmit.co/mosejoro1@gmail.com"
+        method="POST"
+      >
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="occupation">Occupation:</label>
+        <input type="text" id="occupation" name="occupation" />
+
+        <label for="webinarSeries">Tech Webinar Series:</label>
+        <select id="webinarSeries" name="webinarSeries" required>
+          <option value="">Select a series</option>
+          <option value="ai-ml">AI & Machine Learning</option>
+          <option value="ai-ml">Blockchain</option>
+          <option value="web-dev">Web Development</option>
+          <option value="cybersecurity">Cybersecurity</option>
+          <option value="cloud">Cloud Computing</option>
+          <option value="blockchain">Blockchain Technology</option>
+          <option value="devops">DevOps Practices</option>
+          <option value="mobile-dev">Mobile App Development</option>
+          <option value="data-science">Data Science</option>
+          <option value="iot">Internet of Things (IoT)</option>
+          <option value="ar-vr">AR/VR Development</option>
+          <option value="custom">Other (specify)</option>
+        </select>
+
+        <div id="customSeriesContainer">
+          <label for="customSeries">Specify Your Topic:</label>
+          <input
+            type="text"
+            id="Others"
+            name="Others"
+            placeholder="Enter your preferred tech topic"
+          />
+        </div>
+
+        <!-- Hidden inputs for FormSubmit -->
+        <input type="hidden" name="_subject" value="New Webinar Registration" />
+        <input type="hidden" name="_captcha" value="false" />
+        <!-- _next input removed to use FormSubmit's default success page -->
+        <button type="submit">Register Now</button>
+      </form>
+      <div id="successMessage" class="success-message">
+        Thank you for registering! We'll be in touch soon.
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
